@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardActions, CardMedia, CardActionArea, Typography, Container, CardContent, Button, Avatar, Grid, CircularProgress } from '@material-ui/core';
+import { Card, CardActionArea, Typography, Container, CardContent, Avatar, } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,7 +41,7 @@ const UserList = ({ userList }) => {
                 <span className={classes.allHeading}>Name:</span> {`${userList.firstName} ${userList.lastName}`}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                <span className={classes.allHeading}>Gender:</span> {userList.gender == 'M' ? 'Male' : 'Female'}
+                <span className={classes.allHeading}>Gender:</span> {userList.gender === 'M' ? 'Male' : 'Female'}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 <span className={classes.allHeading}>Age:</span> {userList.age}
